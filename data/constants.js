@@ -1,31 +1,41 @@
 import { FaFacebookF, FaGoodreadsG, FaAmazon } from "react-icons/fa6";
 import { SiBabelio } from "react-icons/si";
 
-export const links = [
-  {
-    title: "accueil",
-    to: "/",
-  },
-  {
-    title: "à propos",
-    to: "/a-propos",
-  },
-  {
-    title: "livres",
-    to: "/livres",
-  },
-  {
-    title: "nouvelles",
-    to: "/nouvelles",
-  },
-  {
-    title: "me joindre",
-    to: "/me-joindre",
-  },
-  {
-    title: "boutique",
-    to: "/boutique",
-  },
+export const theme = {
+  textColor: "text-[var(--themeColor--light)]",
+  hoverTextColor: "hover:text-[var(--themeColor--light)]",
+  bgColor: "bg-[var(--themeColor)]",
+}
+
+export const navLinks = [
+  [
+    {
+      name: "accueil",
+      to: "/",
+    },
+    {
+      name: "livres",
+      to: "/livres",
+    },
+    {
+      name: "à propos",
+      to: "/a-propos",
+    },
+    {
+      name: "nouvelles",
+      to: "/nouvelles",
+    },
+  ],
+  [
+    {
+      name: "me joindre",
+      to: "/me-joindre",
+    },
+    {
+      name: "boutique",
+      to: "https://www.amazon.ca/s?i=stripbooks&rh=p_27%3AFannie+Therrien&s=relevancerank&language=fr&text=Fannie+Therrien&ref=dp_byline_sr_book_1",
+    },
+  ],
 ];
 
 export const socials = [
