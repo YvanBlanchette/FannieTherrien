@@ -6,6 +6,7 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
 	const [books, setBooks] = useState([]);
+	const [selectedBook, setSelectedBook] = useState(null); // Start with null
 	const [reviews, setReviews] = useState([]);
 
 	useEffect(() => {
@@ -13,5 +14,11 @@ export const DataProvider = ({ children }) => {
 		setReviews(reviewsData);
 	}, []);
 
-	return <DataContext.Provider value={{ books, setBooks, reviews, setReviews }}>{children}</DataContext.Provider>;
+	useEffect(() => {
+		if (books.length > 0) {
+			setSelectedBook(books[0]);
+		}
+	}, [books]);
+
+	return <DataContext.Provider value={{ books, setBooks, selectedBook, setSelectedBook, reviews, setReviews }}>{children}</DataContext.Provider>;
 };

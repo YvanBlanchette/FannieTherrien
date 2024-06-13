@@ -5,7 +5,7 @@ import Books from "./Books";
 import News from "./News";
 import Contact from "./Contact";
 import Shop from "./Shop";
-import BookDetails from "./BookDetails";
+import Book from "./Book";
 
 const Router = () => {
 	return (
@@ -17,7 +17,7 @@ const Router = () => {
 				<Route path="/nouvelles" element={<News />} />
 				<Route path="/me-joindre" element={<Contact />} />
 				<Route path="/boutique" element={<Shop />} />
-				<Route path="/livres/:bookISBN" element={<BookDetails />} />
+				<Route path="/livres/:bookISBN" element={<Book />} />
 			</Routes>
 		</>
 	);

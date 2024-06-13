@@ -8,7 +8,7 @@ const Reviews = () => {
 	const { reviews } = useContext(DataContext);
 
 	return (
-		<section className="bg-[#F1F1F1] py-6 pb-10 ">
+		<section className="bg-[#f7f5f5] pt-10 ">
 			<h3 className="text-5xl py-4 tracking-wide font-semibold text-center uppercase text-gray-900 mt-6 mb-2">
 				Avis des <span className="inline-block lg:inline text-[#F1F1F1] bg-[#df2a8d] py-1.5 px-3 uppercase px-5 opacity-80 mt-2 lg:mt-0">lecteurs</span>
 			</h3>
@@ -42,11 +42,12 @@ const Reviews = () => {
 				onSwiper={(swiper) => console.log(swiper)}
 				loop
 				pagination={{ clickable: true }}
-				style={{ width: "70vw", marginInline: "auto" }}
+				style={{ width: "85vw", marginInline: "auto" }}
+				className="cursor-grab"
 			>
 				{reviews.map((review) => (
-					<SwiperSlide key={review.id} className="">
-						<div className="card w-72 bg-white flex flex-col p-6 justify-center text-gray-900 h-full">
+					<SwiperSlide key={review.id} className="mb-10">
+						<div className="card w-[100%] bg-white flex flex-col p-6 justify-center text-gray-900 h-full shadow-lg">
 							<h3 className="flex items-center gap-3 text-2xl font-semibold">{review.name} </h3>
 							<p className="text-lg">{review.book}</p>
 							<a href={review.sourceLink} target="_blank" className="text-md cursor-pointer mb-4">
@@ -54,7 +55,7 @@ const Reviews = () => {
 							</a>
 
 							{review.rating === 4 ? (
-								<div className="rating mb-2">
+								<div className="rating mb-2 pointer-events-none">
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />
@@ -62,7 +63,7 @@ const Reviews = () => {
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400 opacity-20" />
 								</div>
 							) : (
-								<div className="rating mb-2">
+								<div className="rating mb-2 pointer-events-none">
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />
 									<input type="radio" name="rating-1" className="mask mask-star bg-yellow-400" />

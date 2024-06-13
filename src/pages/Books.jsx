@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BooksHeader from "../components/pages/books/BooksHeader";
-import BookDetails from "./BookDetails";
-import { books as booksData } from "../../data/books";
+import { DataContext } from "../../context/DataContext";
+import BookDetails from "../components/pages/books/BookDetails";
 
 const Books = () => {
-	const [book, setBook] = useState(null);
-
-	useEffect(() => {
-		setBook(booksData[0]);
-	}, []);
+	const { books, selectedBook, setSelectedBook } = useContext(DataContext);
 
 	const handleClick = (bookName) => {
-		const selectedBook = booksData.find((b) => b.title === bookName);
-		setBook(selectedBook);
+		const book = books.find((b) => b.title === bookName);
+		setSelectedBook(book);
 	};
 
 	return (
@@ -24,7 +20,7 @@ const Books = () => {
 			<img src="/assets/images/underline.svg" alt="brush underline" className="w-[55%] mx-auto" />
 			<div className="w-[90%] max-w-6xl mx-auto">
 				<BooksHeader handleClick={handleClick} />
-				<BookDetails book={book} />
+				<BookDetails book={selectedBook} />
 			</div>
 		</div>
 	);
