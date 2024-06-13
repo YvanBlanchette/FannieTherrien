@@ -26,20 +26,15 @@ const Header = () => {
 					<Link to="/">
 						<Logo fill="black" hoverFill="#e13593" width={275} height={100} />
 					</Link>
-					<RiMenu3Line
-						onClick={() => toggleMobileNav()}
-						className="text-3xl text-black cursor-pointer hover:text-[#e13593] inline lg:hidden transition duration-300"
-					/>
+					<RiMenu3Line onClick={toggleMobileNav} className="text-3xl text-black cursor-pointer hover:text-[#e13593] inline lg:hidden transition duration-300" />
 				</div>
 
 				<nav
-					className={`absolute top-[130px] lg:top-0 lg:relative w-screen lg:w-full h-full bg-white z-[900] lg:block transition-all duration-200 ${
-						mobileNavOpen ? "h-full" : "h-0"
+					className={`absolute lg:static top-[130px] lg:top-0 w-screen lg:w-full h-full bg-white z-[900] lg:block transition-all duration-200 ${
+						mobileNavOpen ? "block" : "hidden"
 					}`}
 				>
-					<ul
-						className={`flex-col lg:flex-row justify-evenly pb-40 lg:justify-end w-full items-center gap-6 h-full ${mobileNavOpen ? "flex" : "hidden"} lg:flex`}
-					>
+					<ul className={`flex flex-col lg:flex-row justify-evenly pb-40 lg:pb-0 lg:justify-end w-full items-center gap-6 h-full`}>
 						{navLinks.map((link, index) => (
 							<li key={index}>
 								<Link
@@ -69,4 +64,5 @@ const Header = () => {
 		</header>
 	);
 };
+
 export default Header;

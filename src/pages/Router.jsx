@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Books from "../pages/Books";
-import News from "../pages/News";
-import Contact from "../pages/Contact";
-import Shop from "../pages/Shop";
-import BookDetails from "../pages/BookDetails";
+import Home from "./Home";
+import About from "./About";
+import Books from "./Books";
+import News from "./News";
+import Contact from "./Contact";
+import Shop from "./Shop";
+import BookDetails from "./BookDetails";
 
 const Router = () => {
 	return (

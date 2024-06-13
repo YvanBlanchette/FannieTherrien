@@ -1,4 +1,4 @@
-import FeaturedBooks from "../FeaturedBooks";
+import FeaturedBooks from "./FeaturedBooks";
 
 const Hero = () => {
 	return (

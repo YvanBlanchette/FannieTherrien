@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import AmazonLogo from "/assets/images/amazon_logo.svg";
-import { DataContext } from "../../context/DataContext";
+import { DataContext } from "../../../../context/DataContext";
 import { useContext } from "react";
 import { htmlToText } from "html-to-text";
 import LinesEllipsis from "react-lines-ellipsis";
@@ -45,13 +45,13 @@ const FeaturedBooks = () => {
 				});
 				return (
 					<SwiperSlide key={book.isbn}>
-						<div className="flex flex-col-reverse lg:flex-row pb-6 gap-y-4 gap-x-6 justify-center">
+						<div className="flex flex-col-reverse lg:flex-row pb-6 gap-y-4 gap-x-6 justify-end">
 							<div className="flex flex-col justify-center lg:justify-end h-full self-center">
 								<p className="text-gray-800  text-center lg:text-start pl-1 font-semibold text-xs lg:text-sm -mb-2">{book.author}</p>
 								<h1 className="text-[2.5rem] text-center lg:text-start lg:text-5xl font-semibold text-[#e13593]">{book.title}</h1>
-								<p className="text-md text-gray-900 max-w-[400px] p-2 lg:mt-4 text-justify">
+								<div className="text-md text-gray-900 max-w-[400px] p-2 lg:mt-4 text-justify">
 									<LinesEllipsis text={bookDescription} maxLine="5" ellipsis="..." basedOn="words" />
-								</p>
+								</div>
 								<div className="flex flex-col lg:flex-row gap-5 justify-center items-center align-center lg:justify-start p-2 mt-4 mb-4">
 									<a
 										href={book.amazon_link}
