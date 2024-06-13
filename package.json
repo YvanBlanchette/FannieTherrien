@@ -1,6 +1,6 @@
 {
-	"name": "starter_vite-react-tailwind",
-	"author": "Yvan jr. Blanchette",
+	"name": "fannietherrien",
+	"author": "Yvan junior Blanchette",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -13,23 +13,27 @@
 	"dependencies": {
 		"axios": "^1.7.2",
 		"framer-motion": "^11.2.10",
+		"html-react-parser": "^5.1.10",
+		"html-to-text": "^9.0.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^5.2.1",
-		"react-router-dom": "^6.23.1"
+		"react-lines-ellipsis": "^0.15.4",
+		"react-router-dom": "^6.23.1",
+		"swiper": "^11.1.4"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.66",
 		"@types/react-dom": "^18.2.22",
 		"@vitejs/plugin-react": "^4.2.1",
 		"autoprefixer": "^10.4.19",
-		"daisyui": "^4.11.1",
+		"daisyui": "^4.12.2",
 		"eslint": "^8.57.0",
 		"eslint-plugin-react": "^7.34.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.6",
 		"postcss": "^8.4.38",
-		"tailwindcss": "^3.4.3",
+		"tailwindcss": "^3.4.4",
 		"vite": "^5.2.0"
 	}
 }

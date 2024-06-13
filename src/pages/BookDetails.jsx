@@ -1,10 +1,15 @@
-import UnderConstruction from "../components/shared/UnderConstruction";
+import BookSummary from "../components/shared/BookSummary";
 
-const BookDetails = () => {
+const BookDetails = ({ book }) => {
+	if (!book) {
+		return <h1>Aucuns livre trouvé!</h1>;
+	}
+
 	return (
-		<div>
-			<UnderConstruction />
-		</div>
+		<>
+			<BookSummary book={book} />
+		</>
 	);
 };
+
 export default BookDetails;

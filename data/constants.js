@@ -8,34 +8,30 @@ export const theme = {
 }
 
 export const navLinks = [
-  [
-    {
-      name: "accueil",
-      to: "/",
-    },
-    {
-      name: "livres",
-      to: "/livres",
-    },
-    {
-      name: "à propos",
-      to: "/a-propos",
-    },
-    {
-      name: "nouvelles",
-      to: "/nouvelles",
-    },
-  ],
-  [
-    {
-      name: "me joindre",
-      to: "/me-joindre",
-    },
-    {
-      name: "boutique",
-      to: "https://www.amazon.ca/s?i=stripbooks&rh=p_27%3AFannie+Therrien&s=relevancerank&language=fr&text=Fannie+Therrien&ref=dp_byline_sr_book_1",
-    },
-  ],
+  {
+    name: "accueil",
+    to: "/",
+  },
+  {
+    name: "livres",
+    to: "/livres",
+  },
+  {
+    name: "à propos",
+    to: "/a-propos",
+  },
+  {
+    name: "nouvelles",
+    to: "/nouvelles",
+  },
+  {
+    name: "me joindre",
+    to: "/me-joindre",
+  },
+  {
+    name: "boutique",
+    to: "https://www.amazon.ca/s?i=stripbooks&rh=p_27%3AFannie+Therrien&s=relevancerank&language=fr&text=Fannie+Therrien&ref=dp_byline_sr_book_1",
+  },
 ];
 
 export const socials = [

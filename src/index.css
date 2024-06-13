@@ -40,3 +40,16 @@ html {
     background-color: #e13593;
   }
 }
+
+.swiper {
+  width: 60%;
+  height: auto;
+}
+
+.blacknwhite {
+  filter: grayscale(100%);
+}
+
+.shadow-custom {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
