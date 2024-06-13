@@ -45,7 +45,7 @@ const FeaturedBooks = () => {
 				});
 				return (
 					<SwiperSlide key={book.isbn}>
-						<div className="flex flex-col lg:flex-row pb-6 gap-y-4 gap-x-6 justify-center lg:justify-end">
+						<div className="flex flex-col-reverse lg:flex-row pb-6 gap-y-4 gap-x-6 justify-center">
 							<div className="flex flex-col justify-center lg:justify-end h-full self-center">
 								<p className="text-gray-800  text-center lg:text-start pl-1 font-semibold text-xs lg:text-sm -mb-2">{book.author}</p>
 								<h1 className="text-[2.5rem] text-center lg:text-start lg:text-5xl font-semibold text-[#e13593]">{book.title}</h1>
